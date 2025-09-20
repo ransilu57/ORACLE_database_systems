@@ -1,37 +1,4 @@
 
---question 4
-INSERT INTO TABLE (
-    SELECT c.invesments
-    FROM lb3_clients_table c
-    WHERE c.firstname = 'John'
-)
-VALUES ((SELECT REF(s) FROM lb3_stocks_table s WHERE s.company='GM' ), 60.00, TO_DATE('2025-08-23','YYYY-MM-DD'), 500);
-
-DELETE FROM TABLE (
-    SELECT c.invesments 
-    FROM lb3_clients_table c
-    WHERE c.firstname = 'John'
-)
-WHERE company=(SELECT REF(s) FROM lb3_stocks_table s WHERE s.company='INFOSYS');
-
-INSERT INTO TABLE (
-    SELECT c.invesments
-    FROM lb3_clients_table C
-    WHERE c.firstname = 'Jill'
-)
-VALUES ((SELECT REF(s) FROM lb3_stocks_table s WHERE s.company='INFOSYS' ), 45.00, TO_DATE('2025-08-23','YYYY-MM-DD'), 1000);
-DELETE FROM TABLE (
-    SELECT c.invesments 
-    FROM lb3_clients_table c
-    WHERE c.firstname = 'Jill'
-)
-WHERE company=(SELECT REF(s) FROM lb3_stocks_table s WHERE s.company='GM');
-
-
-
-
-
-
 
 
 
